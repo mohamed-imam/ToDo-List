@@ -1,0 +1,17 @@
+<ul class="list-group">
+    <li class="list-group-item clearfix task" [ngClass]="isCanceled ? 'd-none' : 'd-block'">
+        <p class="lead" [ngClass]="
+        isDone ? 'text-decoration-line-through' : 'text-decoration-none'">
+            {{ todoTxt }}
+        </p>
+        <div class="text-right">
+            <span class="pull-right">
+                <button class="btn btn-primary btn-xs"><span class="fa-solid fa-check"
+                        (click)="done()"><br>Done</span></button>
+
+                <button class="btn btn-danger btn-xs"><span class="fa-solid fa-xmark"
+                        (click)="delete()"><br>Delete</span></button>
+            </span>
+        </div>
+    </li>
+</ul>

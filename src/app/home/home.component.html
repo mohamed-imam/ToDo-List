@@ -1,0 +1,7 @@
+<div class="container">
+    <div class="col-md-12 col-md-offset-12">
+        <app-add-task (todoInputEmitter)="sendToParent($event)">
+        </app-add-task>
+        <app-task *ngFor="let task of todoList" [todoTxt]="task"></app-task>
+    </div>
+</div>
